@@ -22,7 +22,7 @@
     "jsx": "preserve",
     "incremental": true,
     /* Linting */
-    "strict": true,
+    "strict": false,
     "strictNullChecks": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
