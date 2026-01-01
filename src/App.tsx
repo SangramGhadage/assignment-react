@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 // import './App.css'
-import { Box, Button, Card, CardHeader, Typography } from '@mui/material'
+import { Box, Button, Card, Typography } from '@mui/material'
 import AddWordText from './components/AddWordText'
 import WordList from './components/wordList'
 function App() {
@@ -11,7 +11,7 @@ function App() {
         try {
             const response = await fetch('http://localhost:8001/word/get');
             const data = await response.json();
-            let words = data?.words?.map((word: any, index: number) => ({
+            let words = data?.words?.map((word: any) => ({
                 id: word._id,
                 ...word
             }));

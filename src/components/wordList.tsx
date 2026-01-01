@@ -1,5 +1,5 @@
 import { Box, Button } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { DataGrid, type GridCellParams } from '@mui/x-data-grid';
 import axios from 'axios';
 import AddWordText from './AddWordText';
@@ -11,7 +11,7 @@ function WordList({ data, fetchWords }: { data: any[], fetchWords: () => void })
     const [openView, setOpenView] = useState(false)
     const handleDelete = async (data: any) => {
         try {
-            const response = await axios.delete(`http://localhost:8001/word/delete/${data._id}`);
+            await axios.delete(`http://localhost:8001/word/delete/${data._id}`);
             alert('Word deleted successfully');
             fetchWords()
         } catch (e) {
