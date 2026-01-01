@@ -25,8 +25,12 @@ export default function ViewWord({ open, handleClose, selectedRows }: { open: bo
             <DialogContent>
 
             <p>
+                
                 { }
-                {<div dangerouslySetInnerHTML={{ __html: selectedRows?.description }} /> || 'No description available'}</p>
+                
+                {
+                // @ts-ignore
+                    <div dangerouslySetInnerHTML={{ __html: selectedRows?.description }} /> || 'No description available'}</p>
             </DialogContent>
             <DialogActions >
                 <Button onClick={handleClose} color="primary" variant="contained">

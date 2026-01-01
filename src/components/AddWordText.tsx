@@ -69,6 +69,7 @@ function AddWordText({ open, handleClose, fetchWords, selectedRows }: { open: bo
 
                         <label>Description</label>
                         <Editor
+                        // @ts-ignore
                             onInit={(evt, editor) => editorRef.current = editor}
                             init={{
                                 height: 300,
@@ -87,6 +88,7 @@ function AddWordText({ open, handleClose, fetchWords, selectedRows }: { open: bo
                                     "oxide",
                                 content_css: "default",
                             }}
+                            // @ts-ignore
                             branding={false}
                             initialValue={selectedRows ? selectedRows.description : ''}
                             onEditorChange={handleEditorChange}
